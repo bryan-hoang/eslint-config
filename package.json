@@ -22,9 +22,8 @@
     "typescript.js"
   ],
   "scripts": {
-    "compile": "tsc",
-    "postcompile": "npm run lint -- --fix",
-    "compile:watch": "tsc -w",
+    "build": "tsc",
+    "build:watch": "tsc -w",
     "format": "prettier -c .",
     "postinstall": "npm link && npm link eslint-config-bryan",
     "lint": "eslint --cache --ext ts,tsx,js .",
