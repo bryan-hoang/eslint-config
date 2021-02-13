@@ -1,8 +1,10 @@
 {
-  "name": "nodejs-template",
+  "name": "eslint-config-bryan",
   "version": "1.0.0",
   "description": "",
-  "keywords": [],
+  "keywords": [
+    "eslint"
+  ],
   "homepage": "https://github.com/bryan-hoang/nodejs-template#readme",
   "bugs": {
     "url": "https://github.com/bryan-hoang/nodejs-template/issues"
@@ -11,45 +13,65 @@
     "type": "git",
     "url": "git+https://github.com/bryan-hoang/nodejs-template.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "author": "",
-  "main": "lib/index.js",
+  "main": "index.js",
+  "files": [
+    "dist",
+    "index.js",
+    "typescript.js"
+  ],
   "scripts": {
+    "compile": "tsc",
+    "postcompile": "npm run lint -- --fix",
+    "compile:watch": "tsc -w",
     "format": "prettier -c .",
+    "postinstall": "npm link && npm link eslint-config-bryan",
     "lint": "eslint --cache --ext ts,tsx,js .",
+    "lint:watch": "esw -w  --cache --ext ts,tsx,js",
     "markdownlint": "markdownlint .",
-    "test": "jest",
     "type-check": "tsc --pretty --noEmit"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+  "dependencies": {
+    "@typescript-eslint/parser": "4.15.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-airbnb-typescript": "12.3.1",
+    "eslint-config-prettier": "7.2.0",
+    "prettier-plugin-packagejson": "2.2.9"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "7.12.10",
-    "@babel/preset-env": "7.12.11",
-    "@babel/preset-typescript": "7.12.7",
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
-    "@tsconfig/recommended": "1.0.1",
-    "@types/jest": "26.0.20",
-    "@typescript-eslint/eslint-plugin": "4.14.1",
-    "@typescript-eslint/parser": "4.14.1",
-    "babel-jest": "26.6.3",
+    "@tsconfig/node14": "1.0.0",
+    "@types/eslint": "7.2.6",
     "cz-conventional-changelog": "3.3.0",
-    "eslint": "7.18.0",
-    "eslint-config-airbnb-base": "14.2.1",
-    "eslint-config-prettier": "7.2.0",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-prettier": "3.3.1",
+    "eslint": "7.20.0",
+    "eslint-watch": "7.0.0",
     "husky": "4.3.8",
-    "jest": "26.6.3",
-    "lint-staged": "10.5.3",
+    "lint-staged": "10.5.4",
     "markdownlint-cli": "0.26.0",
     "prettier": "2.2.1",
     "ts-node": "9.1.1",
-    "typescript": "4.1.3"
+    "typescript": "4.1.5"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "4.15.0",
+    "eslint": "7.20.0",
+    "eslint-plugin-eslint-comments": "3.2.0",
+    "eslint-plugin-html": "6.1.1",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-json-files": "0.8.1",
+    "eslint-plugin-json-format": "2.0.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-markdown": "2.0.0-rc.2",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-promise": "4.3.1",
+    "eslint-plugin-react": "7.22.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "eslint-plugin-unicorn": "28.0.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
   }
 }
