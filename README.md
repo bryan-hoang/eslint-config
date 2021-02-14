@@ -1,13 +1,13 @@
 <img src="./img/eslint.png" height=120 alt="Logo of the project" align="right">
 
-# eslint-config-bryan &middot; [![CI Status](https://github.com/bryan-hoang/eslint-config-bryan/workflows/Node.js%20CI/badge.svg)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+# eslint-config-bryan &middot; [![CI Status](https://github.com/bryan-hoang/eslint-config-bryan/workflows/Node.js%20CI/badge.svg)](https://github.com/bryan-hoang/eslint-config-bryan/actions?query=workflow%3A%22Node.js+CI%22) [![npm](https://img.shields.io/npm/v/eslint-config-bryan)](https://www.npmjs.com/package/eslint-config-bryan) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 > My approach to JavaScript linting
 
 This is my [ESLint](https://eslint.org/)
 [Shareable Config](https://eslint.org/docs/developer-guide/shareable-configs)
-which builds off of
-[Airbnb's JavaScript Style Guide](https://github.com/airbnb/javascript#airbnb-javascript-style-guide-)
+which builds off of the
+[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript#airbnb-javascript-style-guide-)
 by adding additional ESLint configs and plugins that I find useful. In addition
 to the base config which is meant to lint only JavaScript, configs for
 [TypeScript](https://www.typescriptlang.org/) and [React](https://reactjs.org/)
