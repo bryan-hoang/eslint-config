@@ -1,7 +1,7 @@
 import type { Linter } from 'eslint';
 
 export = {
-  extends: ['bryan/dist/index', 'airbnb'],
+  extends: ['bryan/dist/index', 'airbnb', 'airbnb/hooks'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
