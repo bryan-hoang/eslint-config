@@ -28,10 +28,11 @@
     "build": "tsc",
     "build:watch": "tsc -w",
     "format": "prettier -c .",
-    "postinstall": "npm link && npm link eslint-config-bryan",
+    "prelint": "npm link && npm link eslint-config-bryan",
     "lint": "eslint --cache --ext ts,tsx,js .",
     "lint:watch": "esw -w  --cache --ext ts,tsx,js",
     "markdownlint": "markdownlint .",
+    "prepublishOnly": "npm i && npm run build",
     "type-check": "tsc --pretty --noEmit"
   },
   "dependencies": {
