@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bryan",
-  "version": "1.0.1",
+  "version": "0.0.0-development",
   "description": "This is my ESLint Shareable Config which builds off of the Airbnb JavaScript Style Guide by adding additional ESLint configs and plugins that I find useful.",
   "keywords": [
     "eslint",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bryan-hoang/eslint-config-bryan.git"
+    "url": "https://github.com/bryan-hoang/eslint-config-bryan.git"
   },
   "license": "MIT",
   "author": "Bryan Hoang",
@@ -28,12 +28,11 @@
     "build": "tsc",
     "build:watch": "tsc -w",
     "format": "prettier -c .",
-    "postinstall": "npm run build",
-    "prelint": "npm link && npm link eslint-config-bryan",
+    "prelint": "npm link eslint-config-bryan",
     "lint": "eslint --cache --ext ts,tsx,js .",
     "lint:watch": "esw -w  --cache --ext ts,tsx,js",
     "markdownlint": "markdownlint .",
-    "prepublishOnly": "npm i",
+    "semantic-release": "semantic-release",
     "type-check": "tsc --pretty --noEmit"
   },
   "dependencies": {
@@ -47,6 +46,8 @@
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
+    "@semantic-release/changelog": "5.0.1",
+    "@semantic-release/git": "9.0.0",
     "@tsconfig/node14": "1.0.0",
     "@types/eslint": "7.2.6",
     "cz-conventional-changelog": "3.3.0",
@@ -56,7 +57,7 @@
     "lint-staged": "10.5.4",
     "markdownlint-cli": "0.26.0",
     "prettier": "2.2.1",
-    "semantic-release": "17.3.9",
+    "semantic-release": "^17.3.9",
     "ts-node": "9.1.1",
     "typescript": "4.1.5"
   },

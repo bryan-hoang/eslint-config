@@ -118,6 +118,9 @@ cd eslint-config-bryan
 npm install
 # Compile the configs in `src` to generate `dist`
 npm run build
+# Link the package so that it can lint itself through `npm run lint`
+npm link
+npm link eslint-config-bryan
 ```
 
 ### Building
