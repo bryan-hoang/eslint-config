@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bryan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is my ESLint Shareable Config which builds off of the Airbnb JavaScript Style Guide by adding additional ESLint configs and plugins that I find useful.",
   "keywords": [
     "eslint",
