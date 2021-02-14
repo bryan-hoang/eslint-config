@@ -1,12 +1,23 @@
-<img src="./img/logo.sample.png" alt="Logo of the project" align="right">
+<img src="./img/eslint.png" height=120 alt="Logo of the project" align="right">
 
-# eslint-config-bryan &middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+# eslint-config-bryan &middot; [![CI Status](https://github.com/bryan-hoang/eslint-config-bryan/workflows/Node.js%20CI/badge.svg)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-> Additional information or tag line
+> My approach to JavaScript linting
 
-A brief description of your project, what it is used for.
+This is my [ESLint](https://eslint.org/)
+[Shareable Config](https://eslint.org/docs/developer-guide/shareable-configs)
+which builds off of
+[Airbnb's JavaScript Style Guide](https://github.com/airbnb/javascript#airbnb-javascript-style-guide-)
+by adding additional ESLint configs and plugins that I find useful. In addition
+to the base config which is meant to lint only JavaScript, configs for
+[TypeScript](https://www.typescriptlang.org/) and [React](https://reactjs.org/)
+are also exported!
 
 - [Installing / Getting started](#installing-getting-started)
+  - [eslint-config-bryan](#eslint-config-bryan)
+  - [eslint-config-bryan/typescript](#eslint-config-bryantypescript)
+  - [eslint-config-bryan/react](#eslint-config-bryanreact)
+  - [eslint-config-bryan/typescript-react](#eslint-config-bryantypescript-react)
 - [Developing](#developing)
   - [Built With](#built-with)
   - [Prerequisites](#prerequisites)
@@ -17,106 +28,153 @@ A brief description of your project, what it is used for.
 - [Configuration](#configuration)
 - [Tests](#tests)
 - [Style guide](#style-guide)
-- [Api Reference](#api-reference)
-- [Database](#database)
+- [Contributing](#contributing)
+- [Code of Conduct](#code-of-conduct)
 - [Licensing](#licensing)
 
 ## Installing / Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+Four standalone ESLint configurations are exported for your usage depending on
+the type of project.
+
+### eslint-config-bryan
+
+1. **Installing the packages**
+
+If using **npm 7+**, run
 
 ```shell
-commands here
+npm install --save-dev eslint-config-bryan
 ```
 
-Here you should say what actually happens when you execute the code above.
+which will also install its associated peer dependencies.
+
+If not using **npm 7+**, run the above command and then install the packages
+listed by the command:
+
+```shell
+npm info eslint-config-bryan@latest peerDependencies
+```
+
+If using **npm 5+**, use this shortcut
+
+```shell
+npx install-peerdeps --dev eslint-config-brayn
+```
+
+2. **Extending the configuration**
+
+Once the config is installed, add `"extends": "bryan"` to your `.eslintrc` file.
+
+### eslint-config-bryan/typescript
+
+This entry point enables the linting rules for TypeScript. To use, add
+`"extends": ["bryan/typescript"]` to your `.eslintrc` file.
+
+This config requires knowledge of your TypeScript config.
+
+In your ESLint config, set
+[parserOptions.project](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#parseroptionsproject)
+to the path of your
+[tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+e.g.
+
+```diff
+{
+   "extends": ["bryan/typescript"],
++  "parserOptions": {
++    "project": ["tsconfig.json"]
++  }
+}
+```
+
+### eslint-config-bryan/react
+
+This entry point enables the linting rules for React. To use, add
+`"extends": ["bryan/react"]` to your `.eslintrc` file.
+
+### eslint-config-bryan/typescript-react
+
+TODO.
 
 ## Developing
 
 ### Built With
 
-List main libraries, frameworks used including versions (React, Angular etc...)
+- ESLint
+- Typescript
 
 ### Prerequisites
 
-What is needed to set up the dev environment. For instance, global dependencies
-or any other tools. include download links.
+Node.js (v12+) and npm (v7+) are need to set up a dev environment for the
+project.
 
 ### Setting up Dev
 
-Here's a brief intro about what a developer must do in order to start developing
-the project further:
-
 ```shell
-git clone https://github.com/your/your-project.git
-cd your-project/
-packagemanager install
+git clone https://github.com/bryan/eslint-config-bryan.git
+cd eslint-config-bryan
+# The postinstall script will run `npm link` and `npm link eslint-config-bryan`
+npm install
+# Compile the configs in `src` to generate `dist`
+npm run build
 ```
-
-And state what happens step-by-step. If there is any virtual environment, local
-server or database feeder needed, explain here.
 
 ### Building
 
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here. for example:
+Run `npm run build:watch` and `npm run lint:watch` to make development go
+smoother.
 
-```shell
-./configure
-make
-make install
-```
-
-Here again you should state what actually happens when the code above gets
-executed.
+**Note:** If you run `npm install <package name>` of any form,
+`npm link eslint-config-bryan` will be broken and you'll need to run `npm i`
+again so that `npm run lint` doesn't break.
 
 ### Deploying / Publishing
 
-give instructions on how to build and release a new version In case there's some
-step you have to take that publishes this project to a server, this is the right
-time to state it.
-
-```shell
-packagemanager deploy your-project -s server.com -u username -p password
-```
-
-And again you'd need to tell what the previous code actually does.
+TODO: Do through `semantic-release`
 
 ## Versioning
 
-We can maybe use [SemVer](http://semver.org/) for versioning. For the versions
-available, see the [link to tags on this repository](/tags).
+We follow [SemVer](http://semver.org/) for versioning.
 
 ## Configuration
 
-Here you should write what are all of the configurations a user can enter when
-using the project.
+<https://eslint.org/docs/user-guide/configuring/>
 
 ## Tests
 
-Describe and show how to run the tests with code examples. Explain what these
-tests test and why.
-
-```shell
-Give an example
-```
+No tests are present because I'm lazy. Also, other somewhat popular eslint
+configs (e.g.
+[eslint-config-airbnb-typescript](https://github.com/iamturns/eslint-config-airbnb-typescript))
+don't have any tests which contributes to my lack of motivation to write tests.
 
 ## Style guide
 
-Explain your code style and show how to check it.
+This project uses itself it check its style (an extension of the
+[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript#airbnb-javascript-style-guide-)).
 
-## Api Reference
+To check it, run
 
-If the api is external, link to api documentation. If not describe your api
-including authentication methods as well as explaining all the endpoints with
-their required parameters.
+```shell
+npm run lint
+```
 
-## Database
+## Contributing
 
-Explaining what database (and version) has been used. Provide download links.
-Documents your database design and schemas, relations etc...
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Code of Conduct
+
+This project's Code of Conduct (see [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)) is
+adapted from the [Contributor Covenant][https://www.contributor-covenant.org],
+version 1.4, available at
+<https://www.contributor-covenant.org/version/1/4/code-of-conduct.html>.
+
+For answers to common questions about this code of conduct, see
+<https://www.contributor-covenant.org/faq>.
 
 ## Licensing
 
-State what the license is and how to find the text version of the license.
+MIT License: Copyright (c) 2021 Bryan Hoang
+
+See [LICENSE](LICENSE).

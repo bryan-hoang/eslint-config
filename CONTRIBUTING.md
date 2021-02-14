@@ -9,9 +9,15 @@ your changes!
 
 ## Style guide
 
-As mentioned in the project's [README.md](README.md), this project generally
-follows the
-[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript#airbnb-javascript-style-guide-)
+As mentioned in the project's [README.md](README.md), this project uses itself
+it check its style (an extension of the
+[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript#airbnb-javascript-style-guide-)).
+
+To check it, run
+
+```shell
+npm run lint
+```
 
 ## Code of Conduct
 
