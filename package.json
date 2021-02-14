@@ -1,9 +1,11 @@
 {
   "name": "eslint-config-bryan",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is my ESLint Shareable Config which builds off of the Airbnb JavaScript Style Guide by adding additional ESLint configs and plugins that I find useful.",
   "keywords": [
-    "eslint"
+    "eslint",
+    "eslintconfig",
+    "eslint-config"
   ],
   "homepage": "https://github.com/bryan-hoang/nodejs-template#readme",
   "bugs": {
@@ -14,12 +16,13 @@
     "url": "git+https://github.com/bryan-hoang/nodejs-template.git"
   },
   "license": "MIT",
-  "author": "",
+  "author": "Bryan Hoang",
   "main": "index.js",
   "files": [
     "dist",
     "index.js",
-    "typescript.js"
+    "typescript.js",
+    "react.js"
   ],
   "scripts": {
     "build": "tsc",
