@@ -7,13 +7,13 @@
     "eslintconfig",
     "eslint-config"
   ],
-  "homepage": "https://github.com/bryan-hoang/nodejs-template#readme",
+  "homepage": "https://github.com/bryan-hoang/eslint-config-bryan#readme",
   "bugs": {
-    "url": "https://github.com/bryan-hoang/nodejs-template/issues"
+    "url": "https://github.com/bryan-hoang/eslint-config-bryan/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bryan-hoang/nodejs-template.git"
+    "url": "git+https://github.com/bryan-hoang/eslint-config-bryan.git"
   },
   "license": "MIT",
   "author": "Bryan Hoang",
