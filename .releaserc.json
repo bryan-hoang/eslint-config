@@ -1,7 +1,22 @@
 {
   "branches": ["main"],
   "plugins": [
-    "@semantic-release/commit-analyzer",
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "releaseRules": [
+          {
+            "release": "patch",
+            "scope": "readme.md",
+            "type": "docs"
+          },
+          {
+            "release": "patch",
+            "type": "refactor"
+          }
+        ]
+      }
+    ],
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
     "@semantic-release/git",
