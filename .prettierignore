@@ -1,1 +1,4 @@
 dist
+# @semantic-release/changelog writes to this file in a way whoch doesn't follow
+# the rules.
+CHANGELOG.md
