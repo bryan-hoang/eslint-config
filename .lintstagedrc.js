@@ -1,7 +1,7 @@
-const typeCheckCommand = () => 'npm run type-check --if-present';
+const typeCheckCommand = () => 'npm run check:types --if-present';
 const eslintCommand = 'npm run lint -- --fix';
 const prettierCommand = 'npm run format -- --write';
-const markdownlintCommand = 'npm run markdownlint -- --fix';
+const markdownlintCommand = 'npm run lint:markdown -- --fix';
 
 const micromatchFileExtension = (...fileExtensions) =>
   `*.(${fileExtensions.join('|')})`;

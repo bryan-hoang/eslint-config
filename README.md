@@ -1,6 +1,6 @@
 <img src="img/eslint.png" height=100 alt="ESLint's Logo" align="right">
 
-# eslint-config-bryan &middot; [![CI Status](https://github.com/bryan-hoang/eslint-config-bryan/workflows/Node.js%20CI/badge.svg)](https://github.com/bryan-hoang/eslint-config-bryan/actions?query=workflow%3A%22Node.js+CI%22) [![npm](https://img.shields.io/npm/v/eslint-config-bryan)](https://www.npmjs.com/package/eslint-config-bryan) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+# eslint-config-bryan &middot; [![CI Status](https://github.com/bryan-hoang/eslint-config-bryan/workflows/Node.js%20CI/badge.svg)](https://github.com/bryan-hoang/eslint-config-bryan/actions?query=workflow%3A%22Node.js+CI%22) [![npm](https://img.shields.io/npm/v/eslint-config-bryan)](https://www.npmjs.com/package/eslint-config-bryan) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 > My approach to JavaScript linting
 
@@ -14,10 +14,10 @@ to the base config which is meant to lint only JavaScript, configs for
 are also exported!
 
 - [Installing / Getting started](#installing-getting-started)
-  - [eslint-config-bryan](#eslint-config-bryan)
-  - [eslint-config-bryan/typescript](#eslint-config-bryantypescript)
-  - [eslint-config-bryan/react](#eslint-config-bryanreact)
-  - [eslint-config-bryan/typescript-react](#eslint-config-bryantypescript-react)
+  - [@bryan/eslint-config](#bryaneslint-config)
+  - [@bryan/eslint-config-typescript](#bryaneslint-config-typescript)
+  - [@bryan/eslint-config-react](#bryaneslint-config-react)
+  - [@bryan/eslint-config-typescript-react](#bryaneslint-config-typescript-react)
 - [Developing](#developing)
   - [Built With](#built-with)
   - [Prerequisites](#prerequisites)
@@ -37,14 +37,14 @@ are also exported!
 Four standalone ESLint configurations are exported for your usage depending on
 the type of project.
 
-### eslint-config-bryan
+### @bryan/eslint-config
 
 1. **Installing the packages**
 
 If using **npm 7+**, run
 
 ```shell
-npm install --save-dev eslint-config-bryan
+npm install --save-dev @bryan/eslint-config-base
 ```
 
 which will also install its associated peer dependencies.
@@ -53,23 +53,24 @@ If not using **npm 7+**, run the above command and then install the packages
 listed by the command:
 
 ```shell
-npm info eslint-config-bryan@latest peerDependencies
+npm info @bryan/eslint-config-base@latest peerDependencies
 ```
 
 If using **npm 5+**, use this shortcut
 
 ```shell
-npx install-peerdeps --dev eslint-config-brayn
+npx install-peerdeps --dev @bryan/eslint-config-base
 ```
 
 2. **Extending the configuration**
 
-Once the config is installed, add `"extends": "bryan"` to your `.eslintrc` file.
+Once the config is installed, add `"extends": "@bryan/eslint-config-base"` to
+your `.eslintrc` file.
 
-### eslint-config-bryan/typescript
+### @bryan/eslint-config-typescript
 
 This entry point enables the linting rules for TypeScript. To use, add
-`"extends": ["bryan/typescript"]` to your `.eslintrc` file.
+`"extends": ["@bryan/eslint-config-typescript"]` to your `.eslintrc` file.
 
 This config requires knowledge of your TypeScript config.
 
@@ -88,12 +89,12 @@ e.g.
 }
 ```
 
-### eslint-config-bryan/react
+### @bryan/eslint-config-react
 
 This entry point enables the linting rules for React. To use, add
-`"extends": ["bryan/react"]` to your `.eslintrc` file.
+`"extends": ["@bryan/eslint-config-react"]` to your `.eslintrc` file.
 
-### eslint-config-bryan/typescript-react
+### @bryan/eslint-config-typescript-react
 
 TODO.
 

@@ -1,47 +1,49 @@
 {
-  "name": "eslint-config-bryan",
+  "name": "@bryan/eslint-config",
   "version": "0.0.0-development",
+  "private": true,
   "description": "This is my ESLint Shareable Config which builds off of the Airbnb JavaScript Style Guide by adding additional ESLint configs and plugins that I find useful.",
   "keywords": [
     "eslint",
     "eslintconfig",
     "eslint-config"
   ],
-  "homepage": "https://github.com/bryan-hoang/eslint-config-bryan#readme",
+  "homepage": "https://github.com/bryan-hoang/eslint-config#readme",
   "bugs": {
-    "url": "https://github.com/bryan-hoang/eslint-config-bryan/issues"
+    "url": "https://github.com/bryan-hoang/eslint-config/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bryan-hoang/eslint-config-bryan.git"
+    "url": "git+https://github.com/bryan-hoang/eslint-config.git"
   },
   "license": "MIT",
   "author": "Bryan Hoang",
   "main": "index.js",
   "files": [
     "dist",
-    "index.js",
-    "typescript.js",
-    "react.js"
+    "index.js"
+  ],
+  "workspaces": [
+    "packages/*"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "lerna run build",
     "build:watch": "tsc -w",
+    "check:spelling": "cspell \"**/*.{md,ts,js}\"",
+    "check:types": "lerna run typecheck",
+    "clean": "lerna clean",
     "format": "prettier -c .",
-    "prelint": "npm link eslint-config-bryan",
+    "postinstall": "npm run lerna:init && npm run build",
+    "lerna:init": "lerna bootstrap --ignore-scripts && lerna link --force-local",
     "lint": "eslint --cache --ext ts,tsx,js .",
+    "lint:markdown": "markdownlint .",
     "lint:watch": "esw -w  --cache --ext ts,tsx,js",
-    "markdownlint": "markdownlint .",
-    "semantic-release": "semantic-release",
-    "type-check": "tsc --pretty --noEmit"
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "4.15.0",
-    "eslint-config-airbnb": "18.2.1",
-    "eslint-config-airbnb-base": "14.2.1",
-    "eslint-config-airbnb-typescript": "12.3.1",
-    "eslint-config-prettier": "7.2.0",
-    "prettier-plugin-packagejson": "2.2.9"
+    "@bryan/eslint-config-base": "file:packages/base",
+    "@bryan/eslint-config-react": "file:packages/react",
+    "@bryan/eslint-config-typescript": "file:packages/typescript"
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
@@ -50,34 +52,20 @@
     "@semantic-release/git": "9.0.0",
     "@tsconfig/node14": "1.0.0",
     "@types/eslint": "7.2.6",
+    "@typescript-eslint/parser": "4.15.0",
+    "cspell": "5.2.4",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "7.20.0",
     "eslint-watch": "7.0.0",
     "husky": "4.3.8",
+    "lerna": "^3.22.1",
     "lint-staged": "10.5.4",
     "markdownlint-cli": "0.26.0",
+    "npm": "7.5.4",
     "prettier": "2.2.1",
-    "semantic-release": "^17.3.9",
+    "semantic-release": "17.3.9",
+    "semantic-release-monorepo": "7.0.4",
     "typescript": "4.1.5"
-  },
-  "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "4.15.0",
-    "eslint": "7.20.0",
-    "eslint-plugin-eslint-comments": "3.2.0",
-    "eslint-plugin-html": "6.1.1",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-jsdoc": "31.6.1",
-    "eslint-plugin-json-files": "0.8.1",
-    "eslint-plugin-json-format": "2.0.1",
-    "eslint-plugin-jsx-a11y": "6.4.1",
-    "eslint-plugin-markdown": "2.0.0-rc.2",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "3.3.1",
-    "eslint-plugin-promise": "4.3.1",
-    "eslint-plugin-react": "7.22.0",
-    "eslint-plugin-react-hooks": "4.2.0",
-    "eslint-plugin-security": "1.4.0",
-    "eslint-plugin-unicorn": "28.0.0"
   },
   "engines": {
     "node": ">=12.0.0",

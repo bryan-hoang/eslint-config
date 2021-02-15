@@ -3,7 +3,7 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["bryan/typescript"],
+  "extends": ["@bryan/eslint-config-typescript"],
   "parserOptions": {
     "project": ["tsconfig.eslint.json"]
   },
