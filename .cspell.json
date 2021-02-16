@@ -2,5 +2,5 @@
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/cspell4/cspell.schema.json",
   "flagWords": ["teh"],
   "language": "en-gb",
-  "words": ["Hoang", "commitlint", "bryaneslint", "peerdeps"]
+  "words": ["Hoang", "commitlint", "bryaneslint", "peerdeps", "markdownlint"]
 }

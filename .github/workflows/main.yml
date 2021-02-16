@@ -49,15 +49,17 @@ jobs:
         run: npm install -g npm@7
       - name: Install
         run: npm install
-      - name: Build
-        run: npm run build
       - name: Format
         run: npm run format
       - name: Lint
         run: |
           npm link
           npm run lint
-          npm run markdownlint
+          npm run lint:markdown
+      - name: Check
+        run: |
+          npm run check:spelling
+          npm run check:types
   release:
     needs: test
     # The if statement checks the github.ref context to determine the current
@@ -74,10 +76,9 @@ jobs:
         run: npm install -g npm@latest
       - name: Prepare package for publish
         run: |
-          npm ci
-          npm run build
+          npm i
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+        run: npm run semantic-release

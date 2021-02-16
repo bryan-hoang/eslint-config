@@ -34,11 +34,11 @@
     "clean": "lerna clean",
     "format": "prettier -c .",
     "postinstall": "npm run lerna:init && npm run build",
-    "lerna:init": "lerna bootstrap --ignore-scripts && lerna link --force-local",
+    "lerna:init": "lerna bootstrap --ignore-scripts --no-ci && lerna link --force-local",
     "lint": "eslint --cache --ext ts,tsx,js .",
     "lint:markdown": "markdownlint .",
     "lint:watch": "esw -w  --cache --ext ts,tsx,js",
-    "semantic-release": "semantic-release"
+    "semantic-release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo"
   },
   "dependencies": {
     "@bryan/eslint-config-base": "file:packages/base",
