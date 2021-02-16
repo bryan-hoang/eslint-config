@@ -1,3 +1,10 @@
+# [@bryan-hoang/eslint-config-base-v1.1.0](https://github.com/bryan-hoang/eslint-config/compare/@bryan-hoang/eslint-config-base-v1.0.0...@bryan-hoang/eslint-config-base-v1.1.0) (2021-02-16)
+
+
+### Features
+
+* add README and LICENSE files as well as fix dependency versioning ([bc62d2a](https://github.com/bryan-hoang/eslint-config/commit/bc62d2a34c65c5aaf876ff23cab34e6c77c00537))
+
 # @bryan-hoang/eslint-config-base-v1.0.0 (2021-02-16)
 
 
