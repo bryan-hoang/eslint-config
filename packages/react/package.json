@@ -1,5 +1,5 @@
 {
-  "name": "@bryan/eslint-config-react",
+  "name": "@bryan-hoang/eslint-config-react",
   "version": "1.0.0",
   "description": "",
   "keywords": [
@@ -23,7 +23,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@bryan/eslint-config-base": "file:../base",
+    "@bryan-hoang/eslint-config-base": "file:../base",
     "eslint-config-airbnb": "18.2.1"
   },
   "peerDependencies": {

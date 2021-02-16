@@ -14,10 +14,10 @@ to the base config which is meant to lint only JavaScript, configs for
 are also exported!
 
 - [Installing / Getting started](#installing-getting-started)
-  - [@bryan/eslint-config](#bryaneslint-config)
-  - [@bryan/eslint-config-typescript](#bryaneslint-config-typescript)
-  - [@bryan/eslint-config-react](#bryaneslint-config-react)
-  - [@bryan/eslint-config-typescript-react](#bryaneslint-config-typescript-react)
+  - [@bryan-hoang/eslint-config](#bryaneslint-config)
+  - [@bryan-hoang/eslint-config-typescript](#bryaneslint-config-typescript)
+  - [@bryan-hoang/eslint-config-react](#bryaneslint-config-react)
+  - [@bryan-hoang/eslint-config-typescript-react](#bryaneslint-config-typescript-react)
 - [Developing](#developing)
   - [Built With](#built-with)
   - [Prerequisites](#prerequisites)
@@ -37,14 +37,14 @@ are also exported!
 Four standalone ESLint configurations are exported for your usage depending on
 the type of project.
 
-### @bryan/eslint-config
+### @bryan-hoang/eslint-config
 
 1. **Installing the packages**
 
 If using **npm 7+**, run
 
 ```shell
-npm install --save-dev @bryan/eslint-config-base
+npm install --save-dev @bryan-hoang/eslint-config-base
 ```
 
 which will also install its associated peer dependencies.
@@ -53,24 +53,24 @@ If not using **npm 7+**, run the above command and then install the packages
 listed by the command:
 
 ```shell
-npm info @bryan/eslint-config-base@latest peerDependencies
+npm info @bryan-hoang/eslint-config-base@latest peerDependencies
 ```
 
 If using **npm 5+**, use this shortcut
 
 ```shell
-npx install-peerdeps --dev @bryan/eslint-config-base
+npx install-peerdeps --dev @bryan-hoang/eslint-config-base
 ```
 
 2. **Extending the configuration**
 
-Once the config is installed, add `"extends": "@bryan/eslint-config-base"` to
-your `.eslintrc` file.
+Once the config is installed, add `"extends": "@bryan-hoang/eslint-config-base"`
+to your `.eslintrc` file.
 
-### @bryan/eslint-config-typescript
+### @bryan-hoang/eslint-config-typescript
 
 This entry point enables the linting rules for TypeScript. To use, add
-`"extends": ["@bryan/eslint-config-typescript"]` to your `.eslintrc` file.
+`"extends": ["@bryan-hoang/eslint-config-typescript"]` to your `.eslintrc` file.
 
 This config requires knowledge of your TypeScript config.
 
@@ -89,12 +89,12 @@ e.g.
 }
 ```
 
-### @bryan/eslint-config-react
+### @bryan-hoang/eslint-config-react
 
 This entry point enables the linting rules for React. To use, add
-`"extends": ["@bryan/eslint-config-react"]` to your `.eslintrc` file.
+`"extends": ["@bryan-hoang/eslint-config-react"]` to your `.eslintrc` file.
 
-### @bryan/eslint-config-typescript-react
+### @bryan-hoang/eslint-config-typescript-react
 
 TODO.
 

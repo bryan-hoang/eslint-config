@@ -2,7 +2,7 @@ import type { Linter } from 'eslint';
 
 const typescriptConfig: Linter.Config = {
   extends: [
-    '@bryan/eslint-config-base',
+    '@bryan-hoang/eslint-config-base',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'airbnb-typescript',

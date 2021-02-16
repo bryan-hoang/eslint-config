@@ -1,5 +1,5 @@
 {
-  "name": "@bryan/eslint-config",
+  "name": "@bryan-hoang/eslint-config",
   "version": "0.0.0-development",
   "private": true,
   "description": "This is my ESLint Shareable Config which builds off of the Airbnb JavaScript Style Guide by adding additional ESLint configs and plugins that I find useful.",
@@ -41,9 +41,9 @@
     "semantic-release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo"
   },
   "dependencies": {
-    "@bryan/eslint-config-base": "file:packages/base",
-    "@bryan/eslint-config-react": "file:packages/react",
-    "@bryan/eslint-config-typescript": "file:packages/typescript"
+    "@bryan-hoang/eslint-config-base": "file:packages/base",
+    "@bryan-hoang/eslint-config-react": "file:packages/react",
+    "@bryan-hoang/eslint-config-typescript": "file:packages/typescript"
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
@@ -63,6 +63,8 @@
     "markdownlint-cli": "0.26.0",
     "npm": "7.5.4",
     "prettier": "2.2.1",
+    "prettier-plugin-packagejson": "2.2.9",
+    "prettier-plugin-sort-json": "0.0.2",
     "semantic-release": "17.3.9",
     "semantic-release-monorepo": "7.0.4",
     "typescript": "4.1.5"

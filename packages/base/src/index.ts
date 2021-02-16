@@ -6,9 +6,9 @@ export = {
   },
   extends: [
     'eslint:recommended',
-    '@bryan/eslint-config-base/dist/rules/es6',
-    '@bryan/eslint-config-base/dist/rules/node',
-    '@bryan/eslint-config-base/dist/rules/imports',
+    '@bryan-hoang/eslint-config-base/dist/rules/es6',
+    '@bryan-hoang/eslint-config-base/dist/rules/node',
+    '@bryan-hoang/eslint-config-base/dist/rules/imports',
     'plugin:security/recommended',
     'plugin:jsdoc/recommended',
     'plugin:markdown/recommended',
