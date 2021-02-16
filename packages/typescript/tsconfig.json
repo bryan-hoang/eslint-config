@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "declaration": true
   },
   "extends": "@tsconfig/node14/tsconfig.json",
   "include": ["src"]

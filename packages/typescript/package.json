@@ -1,23 +1,34 @@
 {
   "name": "@bryan-hoang/eslint-config-typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "My personal ESLint shareable config for TypeScript.",
   "keywords": [
     "eslint",
     "eslint-config",
     "eslintconfig"
   ],
+  "homepage": "https://github.com/bryan-hoang/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/bryan-hoang/eslint-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryan-hoang/eslint-config.git"
+  },
   "license": "MIT",
   "author": "Bryan Hoang",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@bryan-hoang/eslint-config-base": "file:../base",
+    "@bryan-hoang/eslint-config-base": "1.0.0",
     "@typescript-eslint/parser": "4.15.0",
     "eslint-config-airbnb-typescript": "12.3.1"
   },

@@ -1,12 +1,20 @@
 {
   "name": "@bryan-hoang/eslint-config-base",
   "version": "1.0.0",
-  "description": "",
+  "description": "My personal base ESLint shareable config.",
   "keywords": [
     "eslint",
     "eslint-config",
     "eslintconfig"
   ],
+  "homepage": "https://github.com/bryan-hoang/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/bryan-hoang/eslint-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryan-hoang/eslint-config.git"
+  },
   "license": "MIT",
   "author": "Bryan Hoang",
   "main": "dist/index.js",
