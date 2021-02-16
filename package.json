@@ -2,12 +2,7 @@
   "name": "@bryan-hoang/eslint-config",
   "version": "0.0.0-development",
   "private": true,
-  "description": "This is my ESLint Shareable Config which builds off of the Airbnb JavaScript Style Guide by adding additional ESLint configs and plugins that I find useful.",
-  "keywords": [
-    "eslint",
-    "eslintconfig",
-    "eslint-config"
-  ],
+  "description": "My Personal ESLint Shareable Configs.",
   "homepage": "https://github.com/bryan-hoang/eslint-config#readme",
   "bugs": {
     "url": "https://github.com/bryan-hoang/eslint-config/issues"
@@ -18,11 +13,6 @@
   },
   "license": "MIT",
   "author": "Bryan Hoang",
-  "main": "index.js",
-  "files": [
-    "dist",
-    "index.js"
-  ],
   "workspaces": [
     "packages/*"
   ],
@@ -34,16 +24,11 @@
     "clean": "lerna clean",
     "format": "prettier -c .",
     "postinstall": "npm run lerna:init && npm run build",
-    "lerna:init": "lerna bootstrap --ignore-scripts --no-ci && lerna link --force-local",
+    "lerna:init": "lerna bootstrap --hoist --ignore-scripts --no-ci && lerna link --force-local",
     "lint": "eslint --cache --ext ts,tsx,js .",
     "lint:markdown": "markdownlint .",
     "lint:watch": "esw -w  --cache --ext ts,tsx,js",
     "semantic-release": "lerna exec --concurrency 1 -- semantic-release -e semantic-release-monorepo"
-  },
-  "dependencies": {
-    "@bryan-hoang/eslint-config-base": "file:packages/base",
-    "@bryan-hoang/eslint-config-react": "file:packages/react",
-    "@bryan-hoang/eslint-config-typescript": "file:packages/typescript"
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
